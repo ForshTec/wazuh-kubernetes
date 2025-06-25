@@ -11,4 +11,8 @@ apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
   name: wazuh-storage
-# provisioner: k8s.io/minikube-hostpath
+provisioner: nfs.csi.k8s.io # Updated to use NFS CSI driver
+parameters:
+  server: <NFS_SERVER_ADDRESS> # Replace with your NFS server address
+  share: <NFS_SHARE_PATH>      # Replace with your NFS share path
+  readOnly: "false"           # Optional: Set to "true" if the share is read-only
