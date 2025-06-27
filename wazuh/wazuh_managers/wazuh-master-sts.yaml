@@ -41,11 +41,11 @@ spec:
         fsGroup: 101
       containers:
         - name: wazuh-manager
-          image: 'wazuh/wazuh-manager:5.0.0'
+          image: 'wazuh/wazuh-manager:4.12.0'
           resources:
             limits:
               cpu: 400m
-              memory: 512Mi
+              memory: 1Gi
           securityContext:
             capabilities:
               add: ["SYS_CHROOT"]
@@ -152,8 +152,8 @@ spec:
         namespace: wazuh
       spec:
         accessModes:
-          - ReadWriteOnce
+          - ReadWriteMany
         storageClassName: wazuh-storage
         resources:
           requests:
-            storage: 500Mi
+            storage: 20Gi

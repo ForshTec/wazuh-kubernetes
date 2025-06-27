@@ -59,11 +59,11 @@ spec:
             privileged: true
       containers:
         - name: wazuh-indexer
-          image: 'wazuh/wazuh-indexer:5.0.0'
+          image: 'wazuh/wazuh-indexer:4.12.0'
           resources:
             limits:
-              cpu: 500m
-              memory: 1564Mi
+              cpu: 600m
+              memory: 4Gi
           env:
             - name: OPENSEARCH_JAVA_OPTS
               value: '-Xms1g -Xmx1g -Dlog4j2.formatMsgNoLookups=true'
@@ -128,8 +128,8 @@ spec:
         namespace: indexer-cluster
       spec:
         accessModes:
-          - ReadWriteOnce
+          - ReadWriteMany
         storageClassName: wazuh-storage
         resources:
           requests:
-            storage: 500Mi
+            storage: 100Gi

@@ -1,0 +1,16 @@
+---
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: wazuh-authd-pass
+  namespace: wazuh
+spec:
+  encryptedData:
+    authd.pass: AgAzJjLK0i4QgXWWlslxK+i4apahURex8ApjdaV3ZLuDxsCKCJbC7bTtDCCqhHK6cXvR5v5eQbSZVOBUupU0adjUoH3hzqUeUio5+nMxB44NwrATqzLHOGPR79dkkkHdxqsdebV22guVGpcS/sGnoS1Lc9pna47tYmlfRmHemQSVv+v7cdnuHWrYgUBcEfPbFDxip7eiRZD2hGu90qzDmuux0dtFCWX0VrjME2TEc8R4rAxLP7mSBZSXMhqn8TLrWVpt+7Ewd8zIsJ29CgdGRB4CfsWZRhpen6pNG9lCPFu2JjU69EHeNsTdHirIwKkiTXTVS200zOj4OzzIiUHZzge9uH/fJTOSzGBQPN5Iysw1v+48+c95xhG5pF2E1+7QeK38xqFSn7Ll+batoO35sXHQfOMuBki/2PYlaz6f6GKKMlb+pB/C85WXAwdhl5OKWZZ878A2EBuDHbp+LmWAVcC8VOv5j+6v0affk3i2fYWB8BTH7S8u0VgNvldTpRHMPy6Za4pei0pbO9dHo0J+GZ5rz8RJ/B48yGFcZrUJLpX/fANgwk/Srzprp4oLzQnE/0NiTbrfNpDdNaoRIDsa7FNCM+T971rxUjILicWKkuadb/CQkA33d+Nq5qefKKTEQAgf6Bd2YjUq5Yy4GOkYTu8Nj5P87+MIU2888RF2XNKZOj2fe0gQAevSz47LhWnbUjqGVwC2tqrNHc6sNtEl4nNZ8A==
+  template:
+    metadata:
+      creationTimestamp: null
+      name: wazuh-authd-pass
+      namespace: wazuh
+    type: Opaque

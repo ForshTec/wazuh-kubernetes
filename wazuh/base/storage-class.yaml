@@ -11,8 +11,7 @@ apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
   name: wazuh-storage
-provisioner: nfs.csi.k8s.io # Updated to use NFS CSI driver
+provisioner: nfs.csi.k8s.io
 parameters:
-  server: <NFS_SERVER_ADDRESS> # Replace with your NFS server address
-  share: <NFS_SHARE_PATH>      # Replace with your NFS share path
-  readOnly: "false"           # Optional: Set to "true" if the share is read-only
+  server: 192.168.29.80
+  share: /srv/shared/wazuh
